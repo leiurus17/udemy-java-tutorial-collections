@@ -8,7 +8,10 @@ public class App {
 
 	public static void main(String[] args) {
 
+		// if you want to add or remove only at the end of the list, use an ArrayList
 		ArrayList<Integer> arrayList = new ArrayList<Integer>();
+		
+		// if you want to add or remove anywhere on the list, use a LinkedList
 		LinkedList<Integer> linkedList = new LinkedList<Integer>();
 	
 		doTimings("ArrayList", arrayList);
@@ -17,6 +20,22 @@ public class App {
 	
 	private static void doTimings(String type, List<Integer> list) {
 		
+		
+		
+		for(int i=0; i<1E5; i++) {
+			list.add(i);
+		}
+		
+		long start = System.currentTimeMillis();
+		
+		// add items at the end of the list
+		for(int i=0; i<1E5; i++) {
+			list.add(i);
+		}
+		
+		long end = System.currentTimeMillis();
+		
+		System.out.println("Time taken: " + (end - start) + " ms for " + type);
 	}
 
 }
