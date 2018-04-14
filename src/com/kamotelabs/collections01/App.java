@@ -1,6 +1,7 @@
 package com.kamotelabs.collections01;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class App {
 
@@ -32,6 +33,9 @@ public class App {
 		for (Integer value : numbers) {
 			System.out.println(value);
 		}
+		
+		// List interface...
+		List<String> values = new ArrayList<String>();
 
 	}
 
