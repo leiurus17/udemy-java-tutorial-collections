@@ -20,8 +20,6 @@ public class App {
 	
 	private static void doTimings(String type, List<Integer> list) {
 		
-		
-		
 		for(int i=0; i<1E5; i++) {
 			list.add(i);
 		}
