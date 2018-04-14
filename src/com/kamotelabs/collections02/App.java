@@ -29,8 +29,13 @@ public class App {
 		long start = System.currentTimeMillis();
 		
 		// add items at the end of the list
+		// for(int i=0; i<1E5; i++) {
+		// list.add(i);
+		// }
+		
+		// add items elsewhere list
 		for(int i=0; i<1E5; i++) {
-			list.add(i);
+			list.add(0, i);
 		}
 		
 		long end = System.currentTimeMillis();
