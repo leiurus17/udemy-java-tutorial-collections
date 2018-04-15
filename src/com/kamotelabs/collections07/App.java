@@ -5,6 +5,38 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
+class Person {
+	private int id;
+	private String name;
+	
+	public Person(int id, String name) {
+		this.id = id;
+		this.name = name;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+	public String toString() {
+		return name;
+	}
+	
+	
+}
+
 class StringLengthComparator implements Comparator<String> {
 
 	@Override
@@ -96,6 +128,33 @@ public class App {
 		for (Integer number : numbers) {
 			System.out.println(number);
 		}
+		
+		List<Person> people = new ArrayList<Person>();
+		
+		people.add(new Person(1, "Joe"));
+		people.add(new Person(2, "Sue"));
+		people.add(new Person(3, "Bob"));
+		people.add(new Person(4, "Clare"));
+		
+		for(Person person: people) {
+			System.out.println(person);
+		}
+		
+		Collections.sort(people, new Comparator<Person>() {
+
+			@Override
+			public int compare(Person p1, Person p2) {
+				
+				if(p1.getId() > p2.getId()) {
+					return 1;
+				} else if (p1.getId() < p2.getId()) {
+					return -1;
+				}
+				
+				return 0;
+			}
+			
+		});
 
 	}
 
