@@ -45,7 +45,17 @@ class Person implements Comparable<Person> {
 	}
 	
 	public int compareTo(Person person) {
-		return name.compareTo(person.name);
+		
+		int len1 = name.length();
+		int len2 = person.name.length();
+		
+		if(len1 > len2) {
+			return 1;
+		} else if (len1 < len2) {
+			return -1;
+		}
+		
+		return 0;
 	}
 }
 
