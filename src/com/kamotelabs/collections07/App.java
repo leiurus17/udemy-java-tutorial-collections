@@ -24,6 +24,27 @@ class StringLengthComparator implements Comparator<String> {
 	
 }
 
+class AlphabeticalComparator implements Comparator<String> {
+
+	@Override
+	public int compare(String s1, String s2) {
+		
+		return s1.compareTo(s2);
+	}
+	
+}
+
+class ReverseAlphabeticalComparator implements Comparator<String> {
+
+	@Override
+	public int compare(String s1, String s2) {
+		
+		// negative sign
+		return -s1.compareTo(s2);
+	}
+	
+}
+
 public class App {
 
 	public static void main(String[] args) {
@@ -43,8 +64,10 @@ public class App {
 
 		System.out.println("============");
 
-		// static method to sort list
-		Collections.sort(animals);
+		// static method to sort list on string length
+		// Collections.sort(animals, new StringLengthComparator());
+		
+		Collections.sort(animals, new ReverseAlphabeticalComparator());
 
 		for (String animal : animals) {
 			System.out.println(animal);
