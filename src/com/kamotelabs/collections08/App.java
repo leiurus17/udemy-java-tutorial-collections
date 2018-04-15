@@ -6,11 +6,24 @@ import java.util.List;
 import java.util.SortedSet;
 import java.util.TreeSet;
 
+class Person {
+	private String name;
+	
+	public Person(String name) {
+		this.name = name;
+	}
+	
+	@Override
+	public String toString() {
+		return name;
+	}
+}
+
 public class App {
 
 	public static void main(String[] args) {
-		List<String> list = new ArrayList<String>();
-		SortedSet<String> set = new TreeSet<String>();
+		List<Person> list = new ArrayList<Person>();
+		SortedSet<Person> set = new TreeSet<Person>();
 		
 		addElements(list);
 		addElements(set);
@@ -20,16 +33,16 @@ public class App {
 		showElements(set);
 	}
 	
-	private static void addElements(Collection<String> col) {
-		col.add("Joe");
-		col.add("Sue");
-		col.add("Juliet");
-		col.add("Clare");
-		col.add("Mike");
+	private static void addElements(Collection<Person> col) {
+		col.add(new Person("Joe"));
+		col.add(new Person("Sue"));
+		col.add(new Person("Juliet"));
+		col.add(new Person("Clare"));
+		col.add(new Person("Mike"));
 	}
 	
-	private static void showElements(Collection<String> col) {
-		for(String element: col) {
+	private static void showElements(Collection<Person> col) {
+		for(Person element: col) {
 			System.out.println(element);
 		}
 	}
