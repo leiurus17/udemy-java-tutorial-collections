@@ -23,7 +23,7 @@ public class App2 {
 		set1.add("Giraffe");
 		set1.add("Monkey");
 		set1.add("Ant");
-		
+
 		set2.add("Dog");
 		set2.add("Cat");
 		set2.add("Mouse");
@@ -31,15 +31,25 @@ public class App2 {
 		set2.add("Bear");
 		set2.add("Zebra");
 		set2.add("Snail");
-		
+
 		Set<String> intersection = new HashSet<String>(set1);
-		
+
 		System.out.println(set1);
 		System.out.println(intersection);
-		
+
+		// common elements
+
 		intersection.retainAll(set2);
-		
+
 		System.out.println(intersection);
+
+		// different elements
+
+		Set<String> difference = new HashSet<String>(set1);
+
+		difference.removeAll(set2);
+
+		System.out.println(difference);
 
 	}
 
