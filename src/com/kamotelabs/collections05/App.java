@@ -19,11 +19,19 @@ public class App {
 		// TreeSet sorts in natural order
 		Set<String> set3 = new TreeSet<String>();
 		
+		if(set1.isEmpty()) {
+			System.out.println("Set1 is empty.");
+		}
+		
 		set1.add("Dog");
 		set1.add("Cat");
 		set1.add("Mouse");
 		set1.add("Snake");
 		set1.add("Bear");
+		
+		if(set1.isEmpty()) {
+			System.out.println("Set1 is empty.");
+		}
 		
 		set2.add("Dog");
 		set2.add("Cat");
@@ -55,6 +63,14 @@ public class App {
 		
 		for(String element: set3) {
 			System.out.println(element);
+		}
+		
+		if(set1.contains("Aardvark")) {
+			System.out.println("Contains Aardvark");
+		}
+		
+		if(set1.contains("Cat")) {
+			System.out.println("Contains Cat");
 		}
 
 	}
