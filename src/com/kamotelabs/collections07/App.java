@@ -83,7 +83,15 @@ public class App {
 		numbers.add(1);
 
 		// static method to sort list
-		Collections.sort(numbers);
+		Collections.sort(numbers, new Comparator<Integer>() {
+
+			// negative sign for reverse
+			@Override
+			public int compare(Integer num1, Integer num2) {
+				return -num1.compareTo(num2);
+			}
+			
+		});
 
 		for (Integer number : numbers) {
 			System.out.println(number);
