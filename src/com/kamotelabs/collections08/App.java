@@ -53,9 +53,9 @@ class Person implements Comparable<Person> {
 			return 1;
 		} else if (len1 < len2) {
 			return -1;
+		} else {
+			return name.compareTo(person.name);
 		}
-		
-		return 0;
 	}
 }
 
