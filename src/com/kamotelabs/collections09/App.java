@@ -48,6 +48,10 @@ public class App {
 		
 		Queue<Integer> q2 = new ArrayBlockingQueue<Integer>(2);
 
+		// Peek takes the head element but does not throw exception
+		// If there are no elements
+		System.out.println("Queue 2 peek: " + q2.peek());
+		
 		// offer does not throw exception
 		q2.offer(10);
 		q2.offer(20);
