@@ -17,6 +17,9 @@ public class App {
 		q1.add(20);
 		q1.add(30);
 
+		// Throws NoSuchElementException
+		System.out.println("Head of queue: " + q1.element());
+
 		try {
 			q1.add(40);
 		} catch (IllegalStateException e) {
@@ -40,6 +43,26 @@ public class App {
 		} catch (NoSuchElementException e) {
 			System.out.println("Tried to removed to many items from queue");
 		}
+		
+		//////////////////////////////////////
+		
+		Queue<Integer> q2 = new ArrayBlockingQueue<Integer>(2);
+
+		// offer does not throw exception
+		q2.offer(10);
+		q2.offer(20);
+		q2.offer(30);
+		
+		for (Integer value : q2) {
+			System.out.println("Queue value: " + value);
+		}
+		
+		System.out.println("Queue 2 poll: " + q2.poll());
+		System.out.println("Queue 2 poll: " + q2.poll());
+		System.out.println("Queue 2 poll: " + q2.poll());
+		System.out.println("Queue 2 poll: " + q2.poll());
+		
+		
 
 	}
 
