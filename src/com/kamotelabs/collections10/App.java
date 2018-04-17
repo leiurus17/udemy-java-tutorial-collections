@@ -21,12 +21,21 @@ public class App {
 		while (it.hasNext()) {
 			String value = it.next();
 			System.out.println(value);
+			
+			if(value.equals("cat")) {
+				it.remove();
+			}
 		}
+		
+		System.out.println();
 
 		// Modern iteration, Java 5 and later
 
 		for (String animal : animals) {
 			System.out.println(animal);
+			
+			// while iterating in for each
+			// animals.remove(2);
 		}
 
 	}
