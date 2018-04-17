@@ -22,6 +22,7 @@ public class App {
 			String value = it.next();
 			System.out.println(value);
 			
+			// in iterator, you can remove
 			if(value.equals("cat")) {
 				it.remove();
 			}
@@ -34,7 +35,7 @@ public class App {
 		for (String animal : animals) {
 			System.out.println(animal);
 			
-			// while iterating in for each
+			// while iterating in for each you cannot remove
 			// animals.remove(2);
 		}
 
